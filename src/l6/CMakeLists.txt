@@ -1,14 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(cpp-network-lesson-6)
+project(network-cpp-hw-6 C CXX)
 
-find_package(OpenSSL)
-
-if (OpenSSL_FOUND)
-    add_subdirectory("openssl-client")
-endif()
-
-if (UNIX)
-    add_subdirectory("openssl-socket-client")
-    add_subdirectory("jwt-cpp-example")
-endif()
+add_subdirectory(openssl-server)
+add_subdirectory(openssl-client)
